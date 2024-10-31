@@ -14,7 +14,7 @@ clear_screen() {
   clear
 }
 
-# Function to render a Diwali greeting frame
+# Function to render a centered Diwali greeting frame
 show_frame() {
   local color1="$1"
   local color2="$2"
@@ -22,18 +22,18 @@ show_frame() {
   local color4="$4"
 
   echo -e "
-$color1$BOLD                              🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔
-$color2                             ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
-$color3                                               MIST WISHES YOU A
-$color4                                          🌟 HAPPY AND PROSPEROUS DIWALI! 🌟
-$color2                             ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
-$color1$BOLD                              🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔$RESET
+$color1$BOLD                             🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔
+$color2                        ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+$color3                                                MIST WISHES YOU A
+$color4                                     🌟 HAPPY AND PROSPEROUS DIWALI! 🌟
+$color2                        ✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+$color1$BOLD                             🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔🪔$RESET
 
 $color4$BOLD
-                                ✨ May this Diwali bring you joy, health, and wealth! ✨
+                                   ✨ May this Diwali bring you joy, health, and wealth! ✨
                                 
 $color3
-                       🌼 May the glow of lamps brighten your life with endless happiness! 🌼
+                          🌼 May the glow of lamps brighten your life with endless happiness! 🌼
 
 $color2
                 🪔  Let the celebration of Diwali illuminate your path toward success and positivity!  🪔
@@ -42,7 +42,7 @@ $RESET
 "
 }
 
-# Animation loop
+# Animation loop with color cycling
 for i in {1..10}; do
   clear_screen
   case $((i % 5)) in
